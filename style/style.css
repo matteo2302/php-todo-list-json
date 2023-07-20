@@ -1,0 +1,11 @@
+h1,
+form,
+.list-group {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+button {
+  height: 100%;
+  margin-top: 18px;
+}
