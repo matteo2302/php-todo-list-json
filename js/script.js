@@ -3,8 +3,13 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      tasks: ["leggere il libro", "pulire casa", "mangiare un gelato"],
+      tasks: [],
     };
+  },
+  created() {
+    axios.get("http://localhost/php-todo-list-json/api/tasks/").then((res) => {
+      this.tasks = res.data;
+    });
   },
 });
 app.mount("#root");
