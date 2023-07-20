@@ -35,12 +35,12 @@
         <ul class="list-group mt-5">
           <li v-for="task in tasks" class="list-group-item">{{task}}</li>
         </ul>
-        <form class="d-flex align-items-center">
+        <form @submit.prevent="addTask" class="d-flex align-items-center">
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
               ><strong>to do</strong>
             </label>
-            <input type="text" class="form-control" />
+            <input v-model="newTask" type="text" class="form-control" />
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
